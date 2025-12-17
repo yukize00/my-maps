@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a77e300b53de541e2a20eb533bcb24fb {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a77e300b53de541e2a20eb533bcb24fb" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a77e300b53de541e2a20eb533bcb24fb = L.map(
+                "map_a77e300b53de541e2a20eb533bcb24fb",
+                {
+                    center: [23.604641, 120.458736],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_078580d773b65d5dc982c380ea44a8d0 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_078580d773b65d5dc982c380ea44a8d0.addTo(map_a77e300b53de541e2a20eb533bcb24fb);
+        
+    
+            var circle_c797bd703c32ebabbc51192fba7cb411 = L.circle(
+                [23.604641, 120.458736],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1000.0, "stroke": true, "weight": 3}
+            ).addTo(map_a77e300b53de541e2a20eb533bcb24fb);
+        
+    
+            var polygon_f44c5949944b276f3efb769ac3f341a9 = L.polygon(
+                [[23.604641, 120.458736], [23.60231309665999, 120.46821579724781], [23.602161848731047, 120.46817001161935], [23.60201135604809, 120.46812135246262], [23.601861664449974, 120.46806983460863], [23.601712819531382, 120.46801547375901], [23.601564866628962, 120.46795828648123], [23.601417850807504, 120.46789829020327], [23.60127181684622, 120.4678355032089], [23.60112680922512, 120.4677699446313], [23.600982872111445, 120.46770163444796], [23.600840049346242, 120.46763059347415], [23.600698384430995, 120.46755684335653], [23.600557920514383, 120.467480406567], [23.600418700379155, 120.46740130639523], [23.600280766429076, 120.46731956694236], [23.600144160676045, 120.46723521311253], [23.600008924727277, 120.46714827060646], [23.599875099772653, 120.46705876591272], [23.599742726572163, 120.46696672630037], [23.59961184544352, 120.46687217981003], [23.599482496249845, 120.4667751552455], [23.599354718387566, 120.46667568216549], [23.599228550774413, 120.46657379087378], [23.599104031837562, 120.46646951241075], [23.59898119950193, 120.46636287854324], [23.59886009117865, 120.46625392175542], [23.598740743753662, 120.46614267523864], [23.59862319357649, 120.46602917288135], [23.59850747644917, 120.46591344925878], [23.598393627615376, 120.46579553962238], [23.598281681749647, 120.46567547988911], [23.604641, 120.458736]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.25, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_a77e300b53de541e2a20eb533bcb24fb);
+        
+    
+            var marker_ab0da7ffc55b670a775d30b6420c8060 = L.marker(
+                [23.604641, 120.458736],
+                {
+}
+            ).addTo(map_a77e300b53de541e2a20eb533bcb24fb);
+        
+    
+        var popup_d5a2498dd69b1b4ddd67fa9bd71a794d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cf2685cfb9c553b21f07ca8ee3924bdf = $(`<div id="html_cf2685cfb9c553b21f07ca8ee3924bdf" style="width: 100.0%; height: 100.0%;"><a href="https://www.google.com/maps/search/?api=1&query=23.604641,120.458736" target="_blank">🔍 開啟 Google 地圖搜尋</a></div>`)[0];
+                popup_d5a2498dd69b1b4ddd67fa9bd71a794d.setContent(html_cf2685cfb9c553b21f07ca8ee3924bdf);
+            
+        
+
+        marker_ab0da7ffc55b670a775d30b6420c8060.bindPopup(popup_d5a2498dd69b1b4ddd67fa9bd71a794d)
+        ;
+
+        
+    
+    
+            var marker_1d13fd1838a3b1d500be1014592cef2f = L.marker(
+                [23.5970923, 120.4576251],
+                {
+}
+            ).addTo(map_a77e300b53de541e2a20eb533bcb24fb);
+        
+    
+            var icon_f2531e5df112fca4d8137ec2f0acdbd0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a83e4c74900b79890a66276467820eec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dc52b6c5e9b899902d9072b4207cb1f8 = $(`<div id="html_dc52b6c5e9b899902d9072b4207cb1f8" style="width: 100.0%; height: 100.0%;">便利商店 - 7-Eleven</div>`)[0];
+                popup_a83e4c74900b79890a66276467820eec.setContent(html_dc52b6c5e9b899902d9072b4207cb1f8);
+            
+        
+
+        marker_1d13fd1838a3b1d500be1014592cef2f.bindPopup(popup_a83e4c74900b79890a66276467820eec)
+        ;
+
+        
+    
+    
+                marker_1d13fd1838a3b1d500be1014592cef2f.setIcon(icon_f2531e5df112fca4d8137ec2f0acdbd0);
+            
+    
+            var marker_11a424467fe998342cbbd44962bdaac2 = L.marker(
+                [23.5970437, 120.4582551],
+                {
+}
+            ).addTo(map_a77e300b53de541e2a20eb533bcb24fb);
+        
+    
+            var icon_e1207b806fdff7ccfd5034ab384ffa64 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dadf53dc26f9878823f7e82dcfed5190 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3f590d9a4fdcac22001b65889d1ef688 = $(`<div id="html_3f590d9a4fdcac22001b65889d1ef688" style="width: 100.0%; height: 100.0%;">便利商店 - 萊爾富</div>`)[0];
+                popup_dadf53dc26f9878823f7e82dcfed5190.setContent(html_3f590d9a4fdcac22001b65889d1ef688);
+            
+        
+
+        marker_11a424467fe998342cbbd44962bdaac2.bindPopup(popup_dadf53dc26f9878823f7e82dcfed5190)
+        ;
+
+        
+    
+    
+                marker_11a424467fe998342cbbd44962bdaac2.setIcon(icon_e1207b806fdff7ccfd5034ab384ffa64);
+            
+    
+            var marker_f93cd6aaea80c607fbc5a3ba86c60952 = L.marker(
+                [23.6023192, 120.4566124],
+                {
+}
+            ).addTo(map_a77e300b53de541e2a20eb533bcb24fb);
+        
+    
+            var icon_17eb2d7777a90e24f9b009649c728a2f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_13f4d23bcfb0bc7d8225599d7c22f773 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8a880d97de7001deaa7802581b8fca99 = $(`<div id="html_8a880d97de7001deaa7802581b8fca99" style="width: 100.0%; height: 100.0%;">郵局 - 大林郵局</div>`)[0];
+                popup_13f4d23bcfb0bc7d8225599d7c22f773.setContent(html_8a880d97de7001deaa7802581b8fca99);
+            
+        
+
+        marker_f93cd6aaea80c607fbc5a3ba86c60952.bindPopup(popup_13f4d23bcfb0bc7d8225599d7c22f773)
+        ;
+
+        
+    
+    
+                marker_f93cd6aaea80c607fbc5a3ba86c60952.setIcon(icon_17eb2d7777a90e24f9b009649c728a2f);
+            
+    
+            var marker_5edbc50a16939f3595b22a76bedc8a7a = L.marker(
+                [23.6000883, 120.4587717],
+                {
+}
+            ).addTo(map_a77e300b53de541e2a20eb533bcb24fb);
+        
+    
+            var icon_cd96158d94711b143d6144ea8e771e7e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5043eda6f90e0d22fc6f4ee3c4814b4d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4c6a66de5e4fe3268a23b30dfee5a39f = $(`<div id="html_4c6a66de5e4fe3268a23b30dfee5a39f" style="width: 100.0%; height: 100.0%;">便利商店 - 7-Eleven</div>`)[0];
+                popup_5043eda6f90e0d22fc6f4ee3c4814b4d.setContent(html_4c6a66de5e4fe3268a23b30dfee5a39f);
+            
+        
+
+        marker_5edbc50a16939f3595b22a76bedc8a7a.bindPopup(popup_5043eda6f90e0d22fc6f4ee3c4814b4d)
+        ;
+
+        
+    
+    
+                marker_5edbc50a16939f3595b22a76bedc8a7a.setIcon(icon_cd96158d94711b143d6144ea8e771e7e);
+            
+    
+            var marker_4559970f0ea5388316173bfbba883aff = L.marker(
+                [23.6027995, 120.4543242],
+                {
+}
+            ).addTo(map_a77e300b53de541e2a20eb533bcb24fb);
+        
+    
+            var icon_a51897099beed37b1388a5a333e20089 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7c37d2a60e881da28089f6004f874d0a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8425b56110c1303570cca0c41f335667 = $(`<div id="html_8425b56110c1303570cca0c41f335667" style="width: 100.0%; height: 100.0%;">便利商店 - 7-Eleven</div>`)[0];
+                popup_7c37d2a60e881da28089f6004f874d0a.setContent(html_8425b56110c1303570cca0c41f335667);
+            
+        
+
+        marker_4559970f0ea5388316173bfbba883aff.bindPopup(popup_7c37d2a60e881da28089f6004f874d0a)
+        ;
+
+        
+    
+    
+                marker_4559970f0ea5388316173bfbba883aff.setIcon(icon_a51897099beed37b1388a5a333e20089);
+            
+    
+            var marker_7db002dccc286bd85e4173e06cf21933 = L.marker(
+                [23.6042225, 120.454056],
+                {
+}
+            ).addTo(map_a77e300b53de541e2a20eb533bcb24fb);
+        
+    
+            var icon_0a8418e98a9fa82dae8df45409ed8cde = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a37485bce30df01284eac11b43b0fe5b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_027628c725655c6aae0d95acca64eeef = $(`<div id="html_027628c725655c6aae0d95acca64eeef" style="width: 100.0%; height: 100.0%;">便利商店 - 全家便利商店</div>`)[0];
+                popup_a37485bce30df01284eac11b43b0fe5b.setContent(html_027628c725655c6aae0d95acca64eeef);
+            
+        
+
+        marker_7db002dccc286bd85e4173e06cf21933.bindPopup(popup_a37485bce30df01284eac11b43b0fe5b)
+        ;
+
+        
+    
+    
+                marker_7db002dccc286bd85e4173e06cf21933.setIcon(icon_0a8418e98a9fa82dae8df45409ed8cde);
+            
+    
+            var marker_740ac2197986e358a0926fca5148afbe = L.marker(
+                [23.6064738, 120.4556841],
+                {
+}
+            ).addTo(map_a77e300b53de541e2a20eb533bcb24fb);
+        
+    
+            var icon_ba99217384ec6c40ecba7849f2a01f70 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8c6d4561664cc39d77454298eaef53cb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7d8a23db8a3b8a0eb3aa79e7d5e46cf6 = $(`<div id="html_7d8a23db8a3b8a0eb3aa79e7d5e46cf6" style="width: 100.0%; height: 100.0%;">便利商店 - 7-Eleven</div>`)[0];
+                popup_8c6d4561664cc39d77454298eaef53cb.setContent(html_7d8a23db8a3b8a0eb3aa79e7d5e46cf6);
+            
+        
+
+        marker_740ac2197986e358a0926fca5148afbe.bindPopup(popup_8c6d4561664cc39d77454298eaef53cb)
+        ;
+
+        
+    
+    
+                marker_740ac2197986e358a0926fca5148afbe.setIcon(icon_ba99217384ec6c40ecba7849f2a01f70);
+            
+    
+            var marker_1145d10c2e56b045aefc08b8691381c1 = L.marker(
+                [23.6059862, 120.4561537],
+                {
+}
+            ).addTo(map_a77e300b53de541e2a20eb533bcb24fb);
+        
+    
+            var icon_8f9c355d2e4c0e22be00508cbf75de7e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ef42fc2e148947caf54783bcb00b4c29 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e718e7fe1b7360cffae810c7f8fd9138 = $(`<div id="html_e718e7fe1b7360cffae810c7f8fd9138" style="width: 100.0%; height: 100.0%;">郵局 - 大林中山路郵局</div>`)[0];
+                popup_ef42fc2e148947caf54783bcb00b4c29.setContent(html_e718e7fe1b7360cffae810c7f8fd9138);
+            
+        
+
+        marker_1145d10c2e56b045aefc08b8691381c1.bindPopup(popup_ef42fc2e148947caf54783bcb00b4c29)
+        ;
+
+        
+    
+    
+                marker_1145d10c2e56b045aefc08b8691381c1.setIcon(icon_8f9c355d2e4c0e22be00508cbf75de7e);
+            
+    
+            var marker_fbe52fb08f25a125879e608640d8ebe9 = L.marker(
+                [23.6022356, 120.4565001],
+                {
+}
+            ).addTo(map_a77e300b53de541e2a20eb533bcb24fb);
+        
+    
+            var icon_ba79b3e79d2e182f2ed4f007ad7d9c43 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b50cb7f1cda5a228cd42653289086a75 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fa10e34e5a10649b49a1dd2a0714bf55 = $(`<div id="html_fa10e34e5a10649b49a1dd2a0714bf55" style="width: 100.0%; height: 100.0%;">ATM - (未命名)</div>`)[0];
+                popup_b50cb7f1cda5a228cd42653289086a75.setContent(html_fa10e34e5a10649b49a1dd2a0714bf55);
+            
+        
+
+        marker_fbe52fb08f25a125879e608640d8ebe9.bindPopup(popup_b50cb7f1cda5a228cd42653289086a75)
+        ;
+
+        
+    
+    
+                marker_fbe52fb08f25a125879e608640d8ebe9.setIcon(icon_ba79b3e79d2e182f2ed4f007ad7d9c43);
+            
+    
+            var marker_f7813fd969b1f2e718e9b2d4bfa84be7 = L.marker(
+                [23.6015744, 120.4553696],
+                {
+}
+            ).addTo(map_a77e300b53de541e2a20eb533bcb24fb);
+        
+    
+            var icon_a09a02fb7b0279376f690574e3f6a50d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_99d2429c4835acc038a869a7e7e4cfcc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a4a56f80b81e267324b44d37ac72b0fc = $(`<div id="html_a4a56f80b81e267324b44d37ac72b0fc" style="width: 100.0%; height: 100.0%;">便利商店 - 全家便利商店</div>`)[0];
+                popup_99d2429c4835acc038a869a7e7e4cfcc.setContent(html_a4a56f80b81e267324b44d37ac72b0fc);
+            
+        
+
+        marker_f7813fd969b1f2e718e9b2d4bfa84be7.bindPopup(popup_99d2429c4835acc038a869a7e7e4cfcc)
+        ;
+
+        
+    
+    
+                marker_f7813fd969b1f2e718e9b2d4bfa84be7.setIcon(icon_a09a02fb7b0279376f690574e3f6a50d);
+            
+    
+            var marker_a1cd4f0d756fbbbc796a9d1ecfdb4e26 = L.marker(
+                [23.6039187, 120.4559819],
+                {
+}
+            ).addTo(map_a77e300b53de541e2a20eb533bcb24fb);
+        
+    
+            var icon_1c4dabd2950dacb8f0da631ae6dc5b1e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1d72231af10ae6e60f0538fb302fb9f5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_572a07ceada135a40619c5abdf1d497e = $(`<div id="html_572a07ceada135a40619c5abdf1d497e" style="width: 100.0%; height: 100.0%;">便利商店 - 蝦皮店到店</div>`)[0];
+                popup_1d72231af10ae6e60f0538fb302fb9f5.setContent(html_572a07ceada135a40619c5abdf1d497e);
+            
+        
+
+        marker_a1cd4f0d756fbbbc796a9d1ecfdb4e26.bindPopup(popup_1d72231af10ae6e60f0538fb302fb9f5)
+        ;
+
+        
+    
+    
+                marker_a1cd4f0d756fbbbc796a9d1ecfdb4e26.setIcon(icon_1c4dabd2950dacb8f0da631ae6dc5b1e);
+            
+</script>
+</html>
