@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_659f54c75157378b5adae62965b6cfba {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_659f54c75157378b5adae62965b6cfba" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_659f54c75157378b5adae62965b6cfba = L.map(
+                "map_659f54c75157378b5adae62965b6cfba",
+                {
+                    center: [23.604137, 120.455303],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8863e712a8e4ac14084a491e8c77da8a = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_8863e712a8e4ac14084a491e8c77da8a.addTo(map_659f54c75157378b5adae62965b6cfba);
+        
+    
+            var circle_5c7f3f803e09c310efbf760718e534e9 = L.circle(
+                [23.604137, 120.455303],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1000.0, "stroke": true, "weight": 3}
+            ).addTo(map_659f54c75157378b5adae62965b6cfba);
+        
+    
+            var polygon_867d28e10b60df61a53ab7f3f8b26a9f = L.polygon(
+                [[23.604137, 120.455303], [23.60646432782452, 120.44582290261326], [23.606615581297987, 120.44586866792542], [23.60676607984412, 120.44591730718935], [23.606915777616944, 120.44596880559823], [23.607064629014232, 120.44602314747385], [23.607212588691453, 120.44608031627172], [23.607359611575564, 120.44614029458603], [23.607505652878743, 120.44620306415493], [23.607650668112033, 120.44626860586607], [23.60779461309892, 120.44633689976229], [23.607937443988778, 120.4464079250481], [23.60807911727021, 120.44648166009551], [23.60821958978434, 120.44655808245079], [23.60835881873796, 120.44663716884133], [23.60849676171655, 120.44671889518315], [23.608633376697217, 120.44680323658713], [23.608768622061504, 120.44689016736777], [23.608902456608053, 120.44697966105025], [23.60903483956518, 120.44707169037883], [23.60916573060331, 120.44716622732506], [23.609295089847226, 120.44726324309613], [23.609422877888257, 120.44736270814417], [23.60954905579629, 120.44746459217447], [23.60967358513159, 120.44756886415541], [23.609796427956574, 120.44767549232756], [23.60991754684733, 120.4477844442132], [23.61003690490505, 120.44789568662668], [23.610154465767245, 120.44800918568421], [23.610270193618863, 120.4481249068142], [23.610384053203173, 120.44824281476758], [23.610496009832527, 120.44836287362932], [23.604137, 120.455303]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.25, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_659f54c75157378b5adae62965b6cfba);
+        
+    
+            var marker_88814be61124fd376dd0fb8113328083 = L.marker(
+                [23.604137, 120.455303],
+                {
+}
+            ).addTo(map_659f54c75157378b5adae62965b6cfba);
+        
+    
+        var popup_a3eb8c9b9e8bd057f4808d8af53f307b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8bb221028165876a3d62dc88137117aa = $(`<div id="html_8bb221028165876a3d62dc88137117aa" style="width: 100.0%; height: 100.0%;"><a href="https://www.google.com/maps/search/?api=1&query=23.604137,120.455303" target="_blank">🔍 開啟 Google 地圖搜尋</a></div>`)[0];
+                popup_a3eb8c9b9e8bd057f4808d8af53f307b.setContent(html_8bb221028165876a3d62dc88137117aa);
+            
+        
+
+        marker_88814be61124fd376dd0fb8113328083.bindPopup(popup_a3eb8c9b9e8bd057f4808d8af53f307b)
+        ;
+
+        
+    
+</script>
+</html>
